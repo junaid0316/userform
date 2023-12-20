@@ -1,0 +1,149 @@
+.frmlabel {
+    color: #666;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.frmbx {
+    border-radius: 8px;
+    border: 1px solid #CCC;
+    background-color: #fff;
+    padding-right: 16px;
+    color: #666;
+    width: 100%;
+    margin-top: 8px;
+
+    .frminp {
+        font-size: 16px;
+        width: calc(100% - 20px);
+        border: none;
+        padding: 16px;
+        border-radius: 8px;
+        color: #666;
+
+        &::placeholder {
+            color: #666;
+        }
+    }
+}
+
+.ermsg {
+    color: $error;
+    font-size: 12px;
+    height: 18px;
+    margin-top: 4px;
+}
+
+// .frmsel {
+//     padding: 16px;
+//     border-radius: 8px;
+//     border: 1px solid #CCC;
+//     background-color: #fff;
+//     color: #666;
+//     width: 100%;
+//     margin-top: 8px;
+//     font-size: 16px;
+
+//     option {
+//         padding: 16px;
+//         color: #ccc;
+
+//         &:hover {
+//             background-color: $theme-primary;
+//         }
+//     }
+// }
+
+.toggle {
+    label {
+        font-size: 16px;
+    }
+}
+
+.radios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        input {
+            display: grid;
+            place-content: center;
+            width: 22px;
+            height: 22px;
+            border: 1px solid #ccc;
+            -webkit-appearance: none;
+            appearance: none;
+            border-radius: 100%;
+            color: $theme-primary;
+
+            &::before {
+                content: "";
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                transform: scale(0);
+                transition: 120ms transform ease-in-out;
+                box-shadow: inset 1em 1em $theme-primary;
+            }
+
+            &:checked {
+                &::before {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        label {
+            font-size: 16px;
+        }
+    }
+}
+
+.react-toggle-track {
+    background-color: #fff !important;
+    border: 1px solid #ccc;
+    height: 26px;
+}
+
+.react-toggle-thumb {
+    border: 1px solid #ccc !important;
+    height: 19px !important;
+    width: 19px !important;
+    left: 3px;
+    top: 3px !important;
+}
+
+.react-toggle--checked .react-toggle-track {
+    background-color: $theme-primary !important;
+}
+
+.react-toggle--focus .react-toggle-thumb {
+    box-shadow: none !important;
+}
+
+.frmsubmit {
+    padding: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $theme-primary;
+    margin-left: auto;
+    width: 140px;
+    display: flex;
+    border: none;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: $transition;
+
+    &:hover {
+        background-color: $theme-primary-hover;
+        transition: $transition;
+    }
+}

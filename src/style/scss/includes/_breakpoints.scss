@@ -1,0 +1,37 @@
+// Define breakpoints as variables
+$x-small-screen: 480px;
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+
+// Media queries using Sass mixins
+@mixin media-x-small {
+    @media (max-width: $x-small-screen) {
+        @content;
+    }
+}
+@mixin media-small {
+    @media (min-width: $x-small-screen) and (max-width: $small-screen) {
+        @content;
+    }
+}
+@mixin two-media-small {
+    @media (max-width: $x-small-screen) {
+        @content;
+    }
+    @media (min-width: $x-small-screen) and (max-width: $small-screen) {
+        @content;
+    }
+}
+
+@mixin media-medium {
+    @media (min-width: $small-screen) and (max-width: $medium-screen) {
+        @content;
+    }
+}
+
+@mixin media-large {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
+        @content;
+    }
+}

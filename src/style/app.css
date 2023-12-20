@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  color: #333;
+  letter-spacing: 0.25px;
+  background-color: #E1E1E1;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.main {
+  display: flex;
+  gap: 16px;
+  height: 100vh;
+  overflow: hidden;
+}
+.main .dash_content {
+  flex: 1;
+  padding: 16px 16px 16px 0;
+  overflow-y: scroll;
+  height: 100%;
+}
+.main .dash_content .dash_inner {
+  background-color: #fff;
+  padding: 40px;
+}
+.main .sidebar {
+  background-color: #fff;
+  padding: 20px;
+  height: 100vh;
+}
+.main .sidebar .btntoggle {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #b5b5b5;
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .main {
+    flex-wrap: wrap;
+    overflow: auto;
+    padding: 20px;
+  }
+  .main .dash_content {
+    flex: auto;
+    width: 100%;
+    overflow: visible;
+    padding: 0;
+  }
+  .main .dash_content .dash_inner {
+    padding: 20px;
+  }
+  .main .sidebar {
+    height: fit-content;
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+  }
+  .main .sidebar .mobsidebar {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: -300px;
+    height: 100vh;
+    transition: 0.3s all ease;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ccc !important;
+  }
+  .main .sidebar.togg .mobsidebar {
+    left: 0;
+    transition: 0.3s all ease;
+  }
+}
+.frmlabel {
+  color: #666;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.frmbx {
+  border-radius: 8px;
+  border: 1px solid #CCC;
+  background-color: #fff;
+  padding-right: 16px;
+  color: #666;
+  width: 100%;
+  margin-top: 8px;
+}
+.frmbx .frminp {
+  font-size: 16px;
+  width: calc(100% - 20px);
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  color: #666;
+}
+.frmbx .frminp::placeholder {
+  color: #666;
+}
+
+.ermsg {
+  color: #EB5757;
+  font-size: 12px;
+  height: 18px;
+  margin-top: 4px;
+}
+
+.toggle label {
+  font-size: 16px;
+}
+
+.radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.radios > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.radios > div input {
+  display: grid;
+  place-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 100%;
+  color: #7A5CFA;
+}
+.radios > div input::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #7A5CFA;
+}
+.radios > div input:checked::before {
+  transform: scale(1);
+}
+.radios > div label {
+  font-size: 16px;
+}
+
+.react-toggle-track {
+  background-color: #fff !important;
+  border: 1px solid #ccc;
+  height: 26px;
+}
+
+.react-toggle-thumb {
+  border: 1px solid #ccc !important;
+  height: 19px !important;
+  width: 19px !important;
+  left: 3px;
+  top: 3px !important;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: #7A5CFA !important;
+}
+
+.react-toggle--focus .react-toggle-thumb {
+  box-shadow: none !important;
+}
+
+.frmsubmit {
+  padding: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #7A5CFA;
+  margin-left: auto;
+  width: 140px;
+  display: flex;
+  border: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 30px;
+  transition: 0.3s all ease;
+}
+.frmsubmit:hover {
+  background-color: rgba(133, 106, 255, 0.9176470588);
+  transition: 0.3s all ease;
+}
+
+.userform h2 {
+  font-size: 23px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 22px;
+}
+.userform .filesec {
+  display: flex;
+  gap: 10px;
+}
+.userform .filesec .fileinp {
+  border: 1px dashed #ccc;
+  background-color: #fdfdfd;
+  width: 160px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.userform .filesec .fileinp input {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.userform .filesec .fileinp div {
+  background-color: #e4e4e4;
+  width: fit-content;
+  border-radius: 3px;
+  padding: 6px 10px;
+}
+.userform .filesec img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.usertable h2 {
+  font-size: 23px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 22px;
+}
+
+/*# sourceMappingURL=app.css.map */
