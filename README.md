@@ -1,6 +1,6 @@
 To run the project:
 
-Run Command: npm start
+Run Command: npm i then npm start
 
 To change scss run command: npm run watch:css
 
